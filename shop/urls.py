@@ -18,5 +18,6 @@ from django.urls import path
 from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.product_list)
+    path('',views.product_list),
+    path('<slug:category_slug>/',views.product_list)
 ]
